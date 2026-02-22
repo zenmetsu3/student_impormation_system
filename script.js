@@ -57,6 +57,17 @@ async function fetchStudents() {
         updateStats();
     } catch (err) {
         console.error('Error fetching students:', err);
+        // Show error message on UI
+        studentTableBody.innerHTML = `
+            <tr>
+                <td colspan="5" style="text-align:center; color:red; padding: 20px;">
+                    <i class="fas fa-exclamation-triangle"></i> 
+                    Unable to connect to the backend server. <br>
+                    If you are viewing this on GitHub Pages, please note that the backend is not running.<br>
+                    Ensure the local server is running at http://localhost:3000 for full functionality.
+                </td>
+            </tr>
+        `;
     }
 }
 
