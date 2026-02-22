@@ -15,7 +15,9 @@ A web-based Student Management System built with Node.js and Express.
 - Node.js (LTS version recommended)
 - npm (Node Package Manager)
 
-## 📦 Installation
+## 📦 Installation (For New Users)
+
+**Note:** If you are the developer setting up this project for the first time, skip this section and go to [Deployment](#deployment).
 
 1.  Clone the repository:
     ```bash
