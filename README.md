@@ -21,7 +21,7 @@ A web-based Student Management System built with Node.js and Express.
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/YOUR_USERNAME/student_impormation_system.git
+    git clone https://github.com/zenmetsu3/student_impormation_system.git
     cd student_impormation_system
     ```
 
@@ -73,6 +73,45 @@ To deploy to a production environment (e.g., Render, Heroku, AWS):
     ```
 2.  Set the environment variables in your hosting provider's dashboard.
 3.  Connect your GitHub repository to the hosting provider for automatic deployments.
+
+### GitHub Pages (Frontend Only - Experimental)
+
+**Note:** Since this is a Node.js/Express application, deploying to GitHub Pages will only serve the static frontend files (`public` folder). API endpoints and database features will NOT work. This is useful only for UI demonstration.
+
+1.  **Deployment Overview**
+    The deployment process involves:
+    1.  **Building**: (Not applicable for this project, serves `public` folder directly).
+    2.  **Validation**: Ensuring all necessary files exist.
+    3.  **Publishing**: Pushing the contents of the `public` folder to the `gh-pages` branch on GitHub.
+
+2.  **Prerequisites**
+    Ensure you have the following installed and configured:
+    -   **Node.js** (v18 or higher recommended)
+    -   **Git** (configured with your username and email)
+    -   **GitHub Repository** (connected as `origin`)
+
+3.  **Configuration**
+    
+    **`package.json`**
+    The deployment script is defined here:
+    ```json
+    "scripts": {
+      "deploy": "node scripts/deploy.js"
+    }
+    ```
+
+4.  **Manual Deployment Steps**
+    To deploy the latest version of your website (frontend only):
+    
+    1.  Open your terminal in the project root.
+    2.  Run the deployment command:
+        ```bash
+        npm run deploy
+        ```
+    3.  Wait for the script to finish. It will:
+        -   Verify Git environment.
+        -   Create `.nojekyll` file (critical for GitHub Pages).
+        -   Push to `gh-pages` branch.
 
 ## 🛡️ Security
 
